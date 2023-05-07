@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Exercicio MMC</title>
+
+		<script>
+
+			var nome = prompt("Nome: ");
+			var altura = prompt("Altura: ");
+			altura = parseInt(altura);
+			altura = altura / 100;		
+			var peso = prompt("Peso: ");
+			peso = parseFloat(peso);
+			var mmc = peso / (altura * altura);
+
+			var classificacao = null;
+
+			if (mmc < 16){
+				classificacao = "Baixo peso muito grave";
+			} else if (mmc <= 16.99){
+				classificacao = "Baixo peso grave";
+			} else if (mmc <= 18.49){
+				classificacao = "Baixo peso";
+			} else if (mmc <= 24.99){
+				classificacao = "Peso normal";
+			} else if (mmc <= 29.99){
+				classificacao = "Sobrepeso";
+			} else if (mmc <= 34.99){
+				classificacao = "Obesidade grau I";
+			} else if (mmc <= 39.99){
+				classificacao = "Obesidade grau II";
+			} else {
+				classificacao = "Obesidade grau III";
+			}
+
+			document.write(nome + " possui índice de massa corporal igual a " + mmc + " , sendo classificado como: " + classificacao);
+
+		</script>
+	</head>
+
+	<body>
+	</body>
+
+</html>

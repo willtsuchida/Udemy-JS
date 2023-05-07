@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Datas</title>
+
+		<script>
+			
+			var data = new Date();
+
+			document.write(data.toString())
+			document.write('<br>')
+
+			data.setDate(data.getDate() - 6);
+			document.write(data.toString())
+			document.write('<br>')
+
+			var data2 = new Date();
+
+			document.write(data2+'<br>')
+			data2.setMonth(data2.getMonth() + 1)
+			document.write(data2+'<br>')
+
+			var data3 = new Date();
+
+			document.write(data3+'<br>')
+			data3.setFullYear(data3.getFullYear() + 1)
+			document.write(data3+'<br>')
+
+			document.write('<hr>')
+			var data4 = new Date(1990,8,9);
+			var data5 = new Date(1990,8,15)
+			document.write(data4)
+			document.write('<br>'+data5)
+
+			document.write('<br>')
+			document.write('<hr>')
+
+
+			document.write(data4.getTime())
+			document.write('<br>')
+			document.write(data5.getTime())
+
+			var total = data5.getTime() - data4.getTime();
+			document.write('<br>')
+			document.write(total)
+			document.write('<br>Conta para saber qtos ms tem em 1 dia (1*24*60*60*1000) <br>')
+			var msPorDia = (1*24*60*60*1000)
+			document.write(msPorDia	+ '<br>')
+
+			document.write('Diferenca entre dia 9/9/90 e 15/9/90'	+ '<br>')
+			document.write(total/msPorDia + ' dias')
+			/*	
+			var data = new Date()
+			document.write(data+'<br>')
+			document.write('Dia do mes (1-31) ----> ' + data.getDate()+'<br>')
+			document.write('Mes (0-11) ----> ' + (parseInt(data.getMonth())+1)+'<br>')
+			document.write('Ano  ----> ' + data.getFullYear()+'<br>')
+			*/
+		</script>
+
+	</head>
+
+	<body>
+	</body>
+
+</html>

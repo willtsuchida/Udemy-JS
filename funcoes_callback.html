@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Funcoes Callback</title>
+
+		<script>
+			function exibirArtico(id, callbackSucesso, callbackErro){
+				if (false){
+					callbackSucesso('Funções de callback en JS', 'Funcoes de callback sao muito utilizadas');
+				} else {
+					callbackErro('Erro ao recuperar os dados.');
+				}
+			}
+
+			var callbackSucesso = function(titulo, descricao){
+				document.write('<h1>' + titulo + '</h1>');
+				document.write('<hr>');
+				document.write('<p>' + descricao + '</p>');
+			}
+
+			var callbackErro = function(erro){
+				document.write('<p><b>ERRO: </b>' + erro + '</p>');
+			}
+
+			exibirArtico(1, callbackSucesso,callbackErro);
+		</script>
+
+	</head>
+
+	<body>
+	</body>
+
+</html>
